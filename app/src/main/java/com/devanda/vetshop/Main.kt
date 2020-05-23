@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import com.devanda.vetshop.Home.HomeFragment
+import com.devanda.vetshop.Profile.ProfileFragment
+import com.devanda.vetshop.Shop.ShopFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class Main : AppCompatActivity() {
@@ -12,8 +15,8 @@ class Main : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val fragmentHome = HomeFragment()
-        //val fragmentProject = ProjectFragment()
-        //val fragmentProfile = ProfileFragment()
+        val fragmentShop = ShopFragment()
+        val fragmentProfile = ProfileFragment()
 
         setFragment(fragmentHome)
 
@@ -31,33 +34,33 @@ class Main : AppCompatActivity() {
             )
         }
 
-       /* nb_project.setOnClickListener {
-            setFragment(fragmentProject)
+        nb_cart.setOnClickListener {
+            setFragment(fragmentShop)
 
             changeIcon(nb_home,
                 R.drawable.navbar_home_off
             )
-            changeIcon(nb_project,
-                R.drawable.navbar_my_project_active
+            changeIcon(nb_cart,
+                R.drawable.navbar_cart_on
             )
-            changeIcon(nb_profile,
-                R.drawable.navbar_profile_off
+            changeIcon(nb_user,
+                R.drawable.navbar_user_off
             )
         }
 
-        nb_profile.setOnClickListener {
+        nb_user.setOnClickListener {
             setFragment(fragmentProfile)
 
             changeIcon(nb_home,
                 R.drawable.navbar_home_off
             )
-            changeIcon(nb_project,
-                R.drawable.navbar_my_project_off
+            changeIcon(nb_cart,
+                R.drawable.navbar_cart_off
             )
-            changeIcon(nb_profile,
-                R.drawable.navbar_profile_active
+            changeIcon(nb_user,
+                R.drawable.navbar_user_on
             )
-        }*/
+        }
     }
 
     protected fun setFragment(fragment: Fragment) {

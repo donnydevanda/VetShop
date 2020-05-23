@@ -4,18 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register"
+    tools:context=".Login.Register"
     android:background="@color/colorPrimary">
 
     <ImageView
         android:id="@+id/register_pic"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="400dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_register"
-        tools:layout_editor_absoluteY="-200dp"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/register_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back" />
+
+    <TextView
+        android:id="@+id/register_back_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/back"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/register_back_btn"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/register_title"
@@ -99,12 +121,12 @@
         android:paddingLeft="16dp"
         android:text="@string/password"
         android:textColor="@color/colorPrimarySoft"
-        app:layout_constraintBottom_toTopOf="@+id/login_masuk"
+        app:layout_constraintBottom_toTopOf="@+id/register_masuk"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/login_masuk"
+        android:id="@+id/register_masuk"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="64dp"

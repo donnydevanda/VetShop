@@ -9,12 +9,15 @@
         android:roundIcon="@drawable/logo_vetshop"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main"></activity>
-        <activity android:name=".Register" />
-        <activity android:name=".Login" />
-        <activity android:name=".OnBoarding2" />
-        <activity android:name=".OnBoarding1" />
-        <activity android:name=".SplashScreen">
+        <activity android:name=".Shop.ShopDetail"></activity>
+        <activity android:name=".Home.ListDetail" />
+        <activity android:name=".Home.List" />
+        <activity android:name=".Main" />
+        <activity android:name=".Login.Register" />
+        <activity android:name=".Login.Login" />
+        <activity android:name=".Login.OnBoarding2" />
+        <activity android:name=".Login.OnBoarding1" />
+        <activity android:name=".Login.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

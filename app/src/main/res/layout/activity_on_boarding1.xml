@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OnBoarding1"
+    tools:context=".Login.OnBoarding1"
     android:background="@color/colorPrimary">
 
     <ImageView
@@ -51,7 +51,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/roboto"
-        android:text="Dapatkan informasi mengenai lokasi dokter\nhewan terdekat dan kemudahan dalam\nkonsultasi melalui smartphone."
+        android:text="Dapatkan informasi mengenai lokasi \ndokter hewan terdekat dan kemudahan\ndalam konsultasi melalui smartphone."
         android:textColor="@color/colorPrimarySoft"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"

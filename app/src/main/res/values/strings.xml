@@ -5,9 +5,7 @@
     <string name="lanjutkan">Lanjutkan</string>
     <string name="perlengkapan_hewan">Perlengkapan Hewan</string>
     <string name="masuk">MASUK</string>
-    <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="daftar">DAFTAR</string>
     <string name="daftar">DAFTAR</string>
     <string name="username">Username</string>
     <string name="nomor_handphone">Nomor Handphone</string>
@@ -25,4 +23,41 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back">BACK</string>
+    <string name="list_konsultasi">KONSULTASI DENGAN DOKTER</string>
+    <string name="list_konsultasi_desc">Temukan dokter terbaik untuk hewan\nkesayangan anda.</string>
+    <string name="alamat_lengkap">Alamat Lengkap</string>
+    <string name="alamat_lengkap_desc">Alamat Lengkap Desc</string>
+    <string name="jam_praktek">Jam Praktek</string>
+    <string name="jam_praktek_desc">Jam Praktek Desc</string>
+    <string name="biaya_konsultasi">Biaya Konsultasi</string>
+    <string name="biaya_konsultasi_desc">Biaya Konsultasi Desc</string>
+    <string name="info_tambahan">Info Tambahan</string>
+    <string name="info_tambahan_desc">Info Tambahan Desc</string>
+    <string name="hubungi_via_whatsapp">HUBUNGI VIA WHATSAPP</string>
+    <string name="shop">SHOP</string>
+    <string name="promo_hari_ini">Promo Hari Ini!</string>
+    <string name="kategori">KATEGORI</string>
+    <string name="obat_nhewan">Obat\nHewan</string>
+    <string name="makanan_nhewan">Makanan\nHewan</string>
+    <string name="mainan_nhewan">Mainan\nHewan</string>
+    <string name="rumah_nhewan">Rumah\nHewan</string>
+    <string name="nama_produk">Nama Produk</string>
+    <string name="harga">Harga</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="deskripsi_barang">Deskripsi Barang</string>
+    <string name="beli">BELI</string>
+    <string name="stock">Stock</string>
+    <string name="stock_barang">Stock Barang</string>
+    <string name="profile">PROFILE</string>
+    <string name="nama_user">Nama User</string>
+    <string name="telefon_user">Telefon User</string>
+    <string name="email_user">Email User</string>
+    <string name="free">FREE</string>
+    <string name="riwayat_transaksi">RIWAYAT TRANSAKSI</string>
+    <string name="riwayat_transaksi_di_vetshop">Riwayat transaksi di VetShop.</string>
+    <string name="pengaturan_profil">PENGATURAN PROFIL</string>
+    <string name="ubah_nama_email_password">Ubah Nama, Email, Password.</string>
+    <string name="keluar">KELUAR</string>
+    <string name="keluar_akun">Keluar Akun.</string>
 </resources>
