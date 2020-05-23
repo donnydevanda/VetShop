@@ -9,11 +9,18 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.devanda.vetshop.R
+import com.devanda.vetshop.Utils.Preferences
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 
 class ProfileFragment : Fragment() {
+
+    private lateinit var preferences: Preferences
+    lateinit var mDatabase: DatabaseReference
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -24,6 +31,13 @@ class ProfileFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        preferences = Preferences(activity!!.applicationContext)
+        mDatabase = FirebaseDatabase.getInstance().getReference("User")
+
+        profile_nama.text =  preferences.getValues("username")
+        profile_telfon.text =  preferences.getValues("nomor")
+        profile_email.text =  preferences.getValues("email")
 
         //MITRA
         profile_mitra.setOnClickListener {

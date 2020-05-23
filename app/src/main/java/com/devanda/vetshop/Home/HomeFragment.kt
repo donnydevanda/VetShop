@@ -8,12 +8,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.devanda.vetshop.R
+import com.devanda.vetshop.Utils.Preferences
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.fragment_home.*
 
 /**
  * A simple [Fragment] subclass.
  */
 class HomeFragment : Fragment() {
+
+    private lateinit var preferences: Preferences
+    lateinit var mDatabase: DatabaseReference
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +31,11 @@ class HomeFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        preferences = Preferences(activity!!.applicationContext)
+        mDatabase = FirebaseDatabase.getInstance().getReference("User")
+
+        home_greeting.text = "Halo " + preferences.getValues("username") +" !"
 
         //KONSULTASI
         home_konsultasi.setOnClickListener {

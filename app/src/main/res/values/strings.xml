@@ -18,8 +18,8 @@
     <string name="konsultasi_ndokter_nhewan">Konsultasi\nDokter\nHewan</string>
     <string name="jasa_nsalon_nhewan">Jasa\nSalon\nHewan</string>
     <string name="jasa_ntitip_nhewan">Jasa\nTitip\nHewan</string>
-    <string name="temukan_promo_dan_penawaran_menarik">Temukan promo dan penawaran menarik!</string>
-    <string name="home_promo_desc">Setiap transaksi pembelian barang pada VetShop dengan\nminimaltransaksi sebesar Rp.50000 berhak mendapatkan\nongkir gratis. (Max. Rp.20000)</string>
+    <string name="promo_dan_penawaran_menarik">Promo dan penawaran menarik!</string>
+    <string name="home_promo_desc">Setiap transaksi pembelian barang pada VetShop dengan\nminimal transaksi sebesar Rp.50000 berhak mendapatkan\nongkir gratis. (Max. Rp.20000)</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

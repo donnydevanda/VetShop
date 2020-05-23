@@ -24,7 +24,7 @@
         android:id="@+id/home_greeting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/halo_user"
@@ -37,7 +37,7 @@
         android:id="@+id/home_service"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/roboto_medium"
         android:text="@string/temukan_yang_kamu_cari_disini"
@@ -71,12 +71,11 @@
             android:id="@+id/konsultasi_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
             android:fontFamily="@font/roboto"
             android:text="@string/konsultasi_ndokter_nhewan"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/konsultasi_pic"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
@@ -115,12 +114,11 @@
             android:id="@+id/salon_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
             android:fontFamily="@font/roboto"
             android:text="Jasa\nSalon\nHewan"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/salon_pic"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
@@ -159,12 +157,11 @@
             android:id="@+id/titip_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
             android:fontFamily="@font/roboto"
             android:text="@string/jasa_ntitip_nhewan"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/titip_pic"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
@@ -203,12 +200,11 @@
             android:id="@+id/latih_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
             android:fontFamily="@font/roboto"
             android:text="@string/jasa_ntitip_nhewan"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/latih_pic"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
@@ -229,7 +225,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="@string/temukan_promo_dan_penawaran_menarik"
+        android:text="@string/promo_dan_penawaran_menarik"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -258,7 +254,7 @@
         android:id="@+id/home_promo_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/roboto_medium"
         android:text="Promo Bebas Ongkir selama WFH!"
@@ -271,12 +267,15 @@
         android:id="@+id/home_promo_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
         android:fontFamily="@font/roboto"
         android:text="@string/home_promo_desc"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/home_promo_title" />
 
