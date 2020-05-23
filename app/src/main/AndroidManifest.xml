@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/logo_vetshop"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Shop.ShopDetail"></activity>
+        <activity android:name=".Profile.Mitra"></activity>
+        <activity android:name=".Shop.ShopDetail" />
         <activity android:name=".Home.ListDetail" />
         <activity android:name=".Home.List" />
         <activity android:name=".Main" />

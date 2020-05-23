@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "424139531591",
+    "firebase_url": "https://vetshop-1945.firebaseio.com",
+    "project_id": "vetshop-1945",
+    "storage_bucket": "vetshop-1945.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:424139531591:android:5ace921649c2b5e0ff1862",
+        "android_client_info": {
+          "package_name": "com.devanda.vetshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "424139531591-8pj1gkc1ph9ivmg1l8v31ro20ut9a7e1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuualU7wO-vVU3Q_BxJbdUfFe_FQ6QXqc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "424139531591-8pj1gkc1ph9ivmg1l8v31ro20ut9a7e1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
