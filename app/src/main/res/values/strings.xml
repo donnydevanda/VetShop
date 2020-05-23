@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">VetShop</string>
-    <string name="vetshop">VetShop</string>
+    <string name="vetshop">VETSHOP</string>
     <string name="dokter_hewan">Dokter Hewan</string>
     <string name="lanjutkan">Lanjutkan</string>
     <string name="perlengkapan_hewan">Perlengkapan Hewan</string>
@@ -61,4 +61,6 @@
     <string name="gabung_vetshop">GABUNG VETSHOP</string>
     <string name="pendaftaran_mitra_vetshop">Pendaftaran mitra VetShop.</string>
     <string name="pendaftaran_mitra">PENDAFTARAN MITRA</string>
+    <string name="pendaftaran_berhasil">PENDAFTARAN BERHASIL</string>
+    <string name="selesai">SELESAI</string>
 </resources>

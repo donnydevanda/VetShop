@@ -2,14 +2,30 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.devanda.vetshop">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo_vetshop"
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo_vetshop"
+        android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Profile.Mitra"></activity>
+        <activity android:name=".Profile.Success"></activity>
+        <activity android:name=".Profile.Mitra" />
         <activity android:name=".Shop.ShopDetail" />
         <activity android:name=".Home.ListDetail" />
         <activity android:name=".Home.List" />

@@ -79,11 +79,9 @@
         android:layout_width="match_parent"
         android:layout_height="420dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
         android:background="@drawable/shape_rectangle_white"
-        app:layout_constraintBottom_toTopOf="@+id/listdest_wa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -206,14 +204,14 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
         android:background="@drawable/shape_button_primary"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/hubungi_via_whatsapp"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listdes_main" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

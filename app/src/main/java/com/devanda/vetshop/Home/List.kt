@@ -23,7 +23,7 @@ class List : AppCompatActivity() {
         setContentView(R.layout.activity_list)
 
         preferences = Preferences(this)
-        mDatabase = FirebaseDatabase.getInstance().getReference("Project")
+        mDatabase = FirebaseDatabase.getInstance().getReference("Doctor")
         list_rv.layoutManager = LinearLayoutManager(this@List, LinearLayoutManager.VERTICAL, false)
         getData()
 
