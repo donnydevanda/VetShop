@@ -8,7 +8,6 @@
     <string name="password">Password</string>
     <string name="daftar">DAFTAR</string>
     <string name="username">Username</string>
-    <string name="nomor_handphone">Nomor Handphone</string>
     <string name="email">Email</string>
     <string name="nama_dokter">Nama Dokter</string>
     <string name="alamat">Alamat</string>
@@ -45,7 +44,6 @@
     <string name="nama_produk">Nama Produk</string>
     <string name="harga">Harga</string>
     <string name="deskripsi">Deskripsi</string>
-    <string name="deskripsi_barang">Deskripsi Barang</string>
     <string name="beli">BELI</string>
     <string name="stock">Stock</string>
     <string name="stock_barang">Stock Barang</string>
@@ -63,4 +61,11 @@
     <string name="pendaftaran_mitra">PENDAFTARAN MITRA</string>
     <string name="pendaftaran_berhasil">PENDAFTARAN BERHASIL</string>
     <string name="selesai">SELESAI</string>
+    <string name="jual_barang">JUAL BARANG</string>
+    <string name="nama_barang">Nama Barang</string>
+    <string name="harga_barang">Harga Barang</string>
+    <string name="deskripsi_barang">Deskripsi Barang</string>
+    <string name="jual">JUAL</string>
+    <string name="nomor_handphone">Nomor Handphone</string>
+    <string name="kategori_barang">Kategori Barang</string>
 </resources>

@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profile.Mitra"
+    tools:context=".Shop.Sell"
     android:background="@color/colorPrimary">
 
     <ImageView
-        android:id="@+id/mitra_back_btn"
+        android:id="@+id/sell_back_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/ic_back" />
 
     <TextView
-        android:id="@+id/mitra_back_text"
+        android:id="@+id/sell_back_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
@@ -26,20 +26,20 @@
         android:text="@string/back"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/mitra_back_btn"
+        app:layout_constraintStart_toEndOf="@+id/sell_back_btn"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/mitra_title"
+        android:id="@+id/sell_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="@string/pendaftaran_mitra"
+        android:text="@string/jual_barang"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/mitra_back_text"
+        app:layout_constraintTop_toBottomOf="@+id/sell_back_text"
         tools:layout_editor_absoluteX="30dp" />
 
     <ImageView
@@ -50,8 +50,8 @@
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mitra_title"
-        app:srcCompat="@drawable/ic_mitra_pic" />
+        app:layout_constraintTop_toBottomOf="@+id/sell_title"
+        app:srcCompat="@drawable/ic_sell_pic" />
 
     <Button
         android:id="@+id/btn_save_cp"
@@ -74,13 +74,13 @@
         app:srcCompat="@drawable/ic_mitra_add" />
 
     <TextView
-        android:id="@+id/mitra_nama_title"
+        android:id="@+id/sell_nama_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/nama_dokter"
+        android:text="@string/nama_barang"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,7 +88,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_save_cp" />
 
     <EditText
-        android:id="@+id/mitra_nama"
+        android:id="@+id/sell_nama"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="24dp"
@@ -98,24 +98,24 @@
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mitra_nama_title" />
+        app:layout_constraintTop_toBottomOf="@+id/sell_nama_title" />
 
     <TextView
-        android:id="@+id/mitra_alamat_title"
+        android:id="@+id/sell_harga_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/alamat"
+        android:text="@string/harga_barang"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mitra_nama" />
+        app:layout_constraintTop_toBottomOf="@+id/sell_nama" />
 
     <EditText
-        android:id="@+id/mitra_alamat"
+        android:id="@+id/sell_harga"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="24dp"
@@ -128,26 +128,26 @@
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mitra_alamat_title" />
+        app:layout_constraintTop_toBottomOf="@+id/sell_harga_title" />
 
     <TextView
-        android:id="@+id/mitra_jam_title"
+        android:id="@+id/sell_deskripsi_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/jam_praktek"
+        android:text="@string/deskripsi_barang"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mitra_alamat" />
+        app:layout_constraintTop_toBottomOf="@+id/sell_harga" />
 
     <EditText
-        android:id="@+id/mitra_jam"
+        android:id="@+id/sell_deskripsi"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="100dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/shape_rectangle_white"
@@ -155,78 +155,47 @@
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mitra_jam_title" />
+        app:layout_constraintTop_toBottomOf="@+id/sell_deskripsi_title" />
 
     <TextView
-        android:id="@+id/mitra_info_title"
+        android:id="@+id/sell_kategori_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/info_tambahan"
+        android:text="@string/kategori_barang"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mitra_jam" />
+        app:layout_constraintTop_toBottomOf="@+id/sell_deskripsi" />
 
-    <EditText
-        android:id="@+id/mitra_info"
+    <Spinner
+        android:id="@+id/sell_kategori"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:background="@drawable/shape_rectangle_white"
-        android:padding="10dp"
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mitra_info_title" />
+        android:spinnerMode="dropdown"
+        android:background="@drawable/shape_spinner"
 
-    <TextView
-        android:id="@+id/mitra_telefon_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:text="@string/nomor_handphone"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mitra_info" />
-
-    <EditText
-        android:id="@+id/mitra_telefon"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/shape_rectangle_white"
-        android:padding="10dp"
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mitra_telefon_title" />
+        app:layout_constraintTop_toBottomOf="@+id/sell_kategori_title" />
 
     <Button
-        android:id="@+id/mitra_daftar"
+        android:id="@+id/sell_jual"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="34dp"
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/shape_button_primary"
         android:gravity="center"
-        android:text="@string/daftar"
+        android:text="@string/jual"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mitra_telefon"
-        app:layout_constraintVertical_bias="1.0" />
-
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

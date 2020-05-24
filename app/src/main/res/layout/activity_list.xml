@@ -62,7 +62,7 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/list_desc"
-        tools:listitem="@layout/item_list" />
+        tools:listitem="@layout/home_list" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

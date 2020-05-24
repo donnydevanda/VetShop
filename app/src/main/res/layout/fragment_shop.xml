@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/shop_promo"
+        android:id="@+id/shop_promo_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -38,113 +38,17 @@
         android:id="@+id/shop_promo_list"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:background="@color/colorWhite"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shop_promo">
+        app:layout_constraintTop_toBottomOf="@+id/shop_promo_title"
+        tools:layout_editor_absoluteX="24dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:orientation="horizontal">
-
-            <RelativeLayout
-                android:id="@+id/promo1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/promo1_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="140dp"
-                    android:text="Whiskas Jr 1KG"
-                    android:fontFamily="@font/roboto_bold"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/promo1_price"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="160dp"
-                    android:text="Rp. 55000"
-                    android:textColor="@color/colorPrimarySoft"
-                    android:textSize="16sp" />
-
-                <ImageView
-                    android:id="@+id/promo1_pic"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:src="@drawable/ic_shop_promo1" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/promo2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp">
-
-                <TextView
-                    android:id="@+id/promo2_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="140dp"
-                    android:text="Pedigree 20KG"
-                    android:fontFamily="@font/roboto_bold"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/promo2_price"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="160dp"
-                    android:text="Rp. 515000"
-                    android:textColor="@color/colorPrimarySoft"
-                    android:textSize="16sp" />
-
-                <ImageView
-                    android:id="@+id/promo2_pic"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:src="@drawable/ic_shop_promo2" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/promo3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="24dp">
-
-                <TextView
-                    android:id="@+id/promo3_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="140dp"
-                    android:text="Me-o 1KG"
-                    android:fontFamily="@font/roboto_bold"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/promo3_price"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="160dp"
-                    android:text="Rp. 53000"
-                    android:textColor="@color/colorPrimarySoft"
-                    android:textSize="16sp" />
-
-                <ImageView
-                    android:id="@+id/promo3_pic"
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
-                    android:src="@drawable/ic_shop_promo3" />
-            </RelativeLayout>
-        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/shop_promo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:listitem="@layout/shop_list" />
     </HorizontalScrollView>
 
     <TextView
@@ -248,7 +152,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/hkategori_mainan"
+        android:id="@+id/kategori_mainan"
         android:layout_width="160dp"
         android:layout_height="100dp"
         android:layout_marginStart="32dp"
@@ -334,5 +238,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_right" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/shop_sell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/shape_button_primary"
+        android:text="@string/jual_barang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kategori_mainan" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

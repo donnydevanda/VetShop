@@ -20,7 +20,7 @@ class DoctorAdapter(private var data: List<Doctor>,
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LeagueViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         ContextAdapter = parent.context
-        val inflatedView: View = layoutInflater.inflate(R.layout.item_list, parent, false)
+        val inflatedView: View = layoutInflater.inflate(R.layout.home_list, parent, false)
 
         return LeagueViewHolder(
             inflatedView
