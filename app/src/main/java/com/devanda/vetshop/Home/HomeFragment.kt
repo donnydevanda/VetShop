@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.devanda.vetshop.R
 import com.devanda.vetshop.Utils.Preferences
 import com.google.firebase.database.DatabaseReference
@@ -42,6 +43,18 @@ class HomeFragment : Fragment() {
             val i = Intent(activity, List::class.java)
             startActivity(i)
             (activity as Activity?)!!
+        }
+
+        home_salon.setOnClickListener {
+            Toast.makeText(getActivity(),"Cooming Soon!",Toast.LENGTH_SHORT).show();
+        }
+
+        home_latih.setOnClickListener {
+            Toast.makeText(getActivity(),"Cooming Soon!",Toast.LENGTH_SHORT).show();
+        }
+
+        home_titip.setOnClickListener {
+            Toast.makeText(getActivity(),"Cooming Soon!",Toast.LENGTH_SHORT).show();
         }
     }
 

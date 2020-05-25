@@ -1,4 +1,4 @@
-package com.devanda.vetshop.Shop.Kategori
+package com.devanda.vetshop.Shop.Obat
 
 import android.app.Activity
 import android.app.ProgressDialog
@@ -11,7 +11,6 @@ import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.devanda.vetshop.R
-import com.devanda.vetshop.Shop.Item.Mainan
 import com.devanda.vetshop.Shop.Posted
 import com.devanda.vetshop.Utils.Preferences
 import com.github.dhaval2404.imagepicker.ImagePicker
@@ -25,7 +24,7 @@ import com.karumi.dexter.listener.single.PermissionListener
 import kotlinx.android.synthetic.main.activity_sell.*
 import java.util.*
 
-class KategoriMainan : AppCompatActivity(), PermissionListener {
+class KategoriObat : AppCompatActivity(), PermissionListener {
 
     val REQUEST_IMAGE_CAPTURE = 1
     var statusAdd:Boolean = false
@@ -49,7 +48,7 @@ class KategoriMainan : AppCompatActivity(), PermissionListener {
 
         mFirebaseInstance = FirebaseDatabase.getInstance()
         mDatabase = FirebaseDatabase.getInstance().reference
-        mFirebaseDatabase = mFirebaseInstance.getReference("Mainan")
+        mFirebaseDatabase = mFirebaseInstance.getReference("Obat")
 
         sell_add.setOnClickListener {
             if (statusAdd) {
@@ -76,15 +75,15 @@ class KategoriMainan : AppCompatActivity(), PermissionListener {
                     ref.putFile(filePath)
                         .addOnSuccessListener {
                             progressDialog.dismiss()
-                            Toast.makeText(this@KategoriMainan, "Uploaded", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@KategoriObat, "Uploaded", Toast.LENGTH_SHORT).show()
 
                             ref.downloadUrl.addOnSuccessListener {
-                                preferences.setValues("linkproducts", it.toString())
+                                preferences.setValues("linkobat", it.toString())
                             }
                         }
                         .addOnFailureListener { e ->
                             progressDialog.dismiss()
-                            Toast.makeText(this@KategoriMainan, "Failed " + e.message, Toast.LENGTH_SHORT)
+                            Toast.makeText(this@KategoriObat, "Failed " + e.message, Toast.LENGTH_SHORT)
                                 .show()
                         }
                         .addOnProgressListener { taskSnapshot ->
@@ -113,7 +112,7 @@ class KategoriMainan : AppCompatActivity(), PermissionListener {
                 var sNama = sell_nama.text.toString()
                 var sHarga = sell_harga.text.toString()
                 var sDeskripsi = sell_deskripsi.text.toString()
-                var sImage = preferences.getValues("linkproducts")
+                var sImage = preferences.getValues("linkobat")
                 saveProject(sNama, sHarga, sDeskripsi, sImage)
             } else{
                 Toast.makeText(this, "Mohon Simpan Gambar", Toast.LENGTH_SHORT).show()
@@ -123,22 +122,22 @@ class KategoriMainan : AppCompatActivity(), PermissionListener {
     }
 
     private fun saveProject(sNama: String?, sHarga: String?, sDeskripsi: String?, sImage: String?) {
-        val mainan = Mainan()
-        mainan.nama = sNama
-        mainan.harga = sHarga
-        mainan.deskripsi = sDeskripsi
-        mainan.images = sImage
+        val obat = Obat()
+        obat.nama = sNama
+        obat.harga = sHarga
+        obat.deskripsi = sDeskripsi
+        obat.images = sImage
 
         if (sNama != null) {
-            checkingUsername(sNama, mainan)
+            checkingUsername(sNama, obat)
         }
     }
 
-    private fun checkingUsername(iTitle: String, data: Mainan) {
+    private fun checkingUsername(iTitle: String, data: Obat) {
         mFirebaseDatabase.child(iTitle).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
 
-                val kat = dataSnapshot.getValue(Mainan::class.java)
+                val kat = dataSnapshot.getValue(Obat::class.java)
                 if (kat == null) {
                     mFirebaseDatabase.child(iTitle).setValue(data)
                     preferences.setValues("nama", data.nama.toString())
@@ -147,18 +146,18 @@ class KategoriMainan : AppCompatActivity(), PermissionListener {
                     preferences.setValues("images", data.images.toString())
                     preferences.setValues("status", "1")
 
-                    val intent = Intent(this@KategoriMainan,
+                    val intent = Intent(this@KategoriObat,
                         Posted::class.java)
                     startActivity(intent)
 
                 } else {
-                    Toast.makeText(this@KategoriMainan, "Nama Sudah Digunakan", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@KategoriObat, "Nama Sudah Digunakan", Toast.LENGTH_LONG).show()
 
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@KategoriMainan, ""+error.message, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@KategoriObat, ""+error.message, Toast.LENGTH_LONG).show()
             }
         })
     }
@@ -203,5 +202,4 @@ class KategoriMainan : AppCompatActivity(), PermissionListener {
             Toast.makeText(this, "Task Cancelled", Toast.LENGTH_SHORT).show()
         }
     }
-
 }

@@ -70,4 +70,8 @@
     <string name="kategori_barang">Kategori Barang</string>
     <string name="simpan_gambar">SIMPAN GAMBAR</string>
     <string name="posting_berhasil">POSTING BERHASIL</string>
+    <string name="makanan_hewan">MAKANAN HEWAN</string>
+    <string name="obat_hewan">OBAT HEWAN</string>
+    <string name="mainan_hewan">MAINAN HEWAN</string>
+    <string name="rumah_hewan">RUMAH HEWAN</string>
 </resources>

@@ -38,17 +38,113 @@
         android:id="@+id/shop_promo_list"
         android:layout_width="match_parent"
         android:layout_height="180dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:background="@color/colorWhite"
-        app:layout_constraintTop_toBottomOf="@+id/shop_promo_title"
-        tools:layout_editor_absoluteX="24dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shop_promo_title">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/shop_promo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            tools:listitem="@layout/shop_list" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="140dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginLeft="10dp"
+                    android:text="Whiskas 1KG"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="160dp"
+                    android:fontFamily="@font/roboto"
+                    android:layout_marginLeft="10dp"
+                    android:text="Rp. 59000"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/ic_promo1" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/web"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="140dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Pedigree 20KG"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="160dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Rp. 550000"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/ic_promo2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/uiux"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="140dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Me-o 1KG"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="160dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Rp. 52000"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/ic_promo3" />
+            </RelativeLayout>
+        </LinearLayout>
     </HorizontalScrollView>
 
     <TextView
@@ -238,18 +334,4 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_right" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <Button
-        android:id="@+id/shop_sell"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/shape_button_primary"
-        android:text="@string/jual_barang"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kategori_mainan" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

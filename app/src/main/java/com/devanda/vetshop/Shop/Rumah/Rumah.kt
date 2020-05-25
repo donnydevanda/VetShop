@@ -1,10 +1,10 @@
-package com.devanda.vetshop.Shop.Item
+package com.devanda.vetshop.Shop.Rumah
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Mainan (
+data class Rumah (
     var nama: String ?="",
     var harga: String ?="",
     var deskripsi: String ?="",

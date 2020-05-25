@@ -1,4 +1,4 @@
-package com.devanda.vetshop.Shop.Item
+package com.devanda.vetshop.Shop.Obat
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

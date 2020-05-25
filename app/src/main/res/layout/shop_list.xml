@@ -5,13 +5,11 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingTop="16dp"
-    android:paddingBottom="16dp"
-    android:paddingLeft="8dp"
-    android:paddingRight="8dp">
+    android:paddingBottom="16dp">
 
     <RelativeLayout
         android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_height="180dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/shape_rectangle_white"
@@ -19,34 +17,41 @@
         android:paddingTop="15dp"
         android:paddingBottom="15dp">
 
-        <ImageView
+        <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/item_image"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/ic_home_dokter"/>
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_promo1"
+            app:riv_border_color="@color/colorPrimaryDark"
+            app:riv_border_width="1dp"
+            app:riv_corner_radius="20dip"
+            app:riv_mutate_background="true"
+            app:riv_oval="false"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/item_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="110dp"
             android:fontFamily="@font/roboto_bold"
             android:text="@string/nama_barang"
-            android:maxLength="18"
+            android:paddingLeft="5dp"
+            android:maxLength="14"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="16dp" />
 
         <TextView
             android:id="@+id/item_price"
-            android:layout_width="140dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="130dp"
             android:fontFamily="@font/roboto"
+            android:paddingLeft="5dp"
             android:maxLines="1"
             android:text="@string/harga"
-            android:maxLength="18"
+            android:maxLength="12"
             android:textColor="@color/colorPrimaryDark" />
     </RelativeLayout>
 </RelativeLayout>

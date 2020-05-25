@@ -26,6 +26,15 @@ class Login : AppCompatActivity() {
         mDatabase = FirebaseDatabase.getInstance().getReference("User")
         preferences = Preferences(this)
 
+        preferences.setValues("onboarding", "1")
+        if (preferences.getValues("status").equals("1")) {
+            finishAffinity()
+
+            val intent = Intent(this@Login,
+                Main::class.java)
+            startActivity(intent)
+        }
+
         login_masuk.setOnClickListener{
             iUsername = login_username.text.toString()
             iPassword = login_password.text.toString()
