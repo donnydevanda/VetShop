@@ -24,7 +24,12 @@
         android:roundIcon="@drawable/logo_vetshop"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Shop.Sell"></activity>
+        <activity android:name=".Shop.Posted"></activity>
+        <activity android:name=".Shop.Kategori.KategoriMakanan" />
+        <activity android:name=".Shop.Kategori.KMakanan" />
+        <activity android:name=".Shop.Kategori.KategoriMakanan" />
+        <activity android:name=".Shop.Kategori.KategoriObat" />
+        <activity android:name=".Shop.Sell" />
         <activity android:name=".Profile.Success" />
         <activity android:name=".Profile.Mitra" />
         <activity android:name=".Shop.ShopDetail" />

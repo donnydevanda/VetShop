@@ -7,12 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
 import com.devanda.vetshop.R
-import com.devanda.vetshop.Utils.Preferences
-import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_sell.*
-import kotlinx.android.synthetic.main.fragment_home.*
+import com.devanda.vetshop.Shop.Kategori.KategoriMainan
 import kotlinx.android.synthetic.main.fragment_shop.*
 
 /**
@@ -31,12 +27,11 @@ class ShopFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        //SELL
-        shop_sell.setOnClickListener {
-            val i = Intent(activity, Sell::class.java)
+        //Mainan
+        kategori_mainan.setOnClickListener {
+            val i = Intent(activity, KategoriMainan::class.java)
             startActivity(i)
             (activity as Activity?)!!
         }
     }
-
 }

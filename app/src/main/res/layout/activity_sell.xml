@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Shop.Sell"
+    tools:context=".Shop.Kategori.KategoriObat"
     android:background="@color/colorPrimary">
 
     <ImageView
@@ -43,7 +43,7 @@
         tools:layout_editor_absoluteX="30dp" />
 
     <ImageView
-        android:id="@+id/iv_profile_cp"
+        android:id="@+id/sell_pic"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_gravity="center"
@@ -54,24 +54,25 @@
         app:srcCompat="@drawable/ic_sell_pic" />
 
     <Button
-        android:id="@+id/btn_save_cp"
-        android:layout_width="120dp"
+        android:id="@+id/sell_save"
+        android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/shape_button_primary"
-        android:text="Save Picture"
+        android:text="@string/simpan_gambar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_profile_cp" />
+        app:layout_constraintTop_toBottomOf="@+id/sell_pic" />
 
     <ImageView
-        android:id="@+id/iv_add_cp"
-        android:layout_width="30dp"
+        android:id="@+id/sell_add"
+        android:layout_width="50dp"
         android:layout_height="30dp"
         android:layout_gravity="center"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_profile_cp"
-        app:layout_constraintEnd_toEndOf="@+id/iv_profile_cp"
+        app:layout_constraintBottom_toBottomOf="@+id/sell_pic"
+        app:layout_constraintEnd_toEndOf="@+id/sell_pic"
         app:srcCompat="@drawable/ic_mitra_add" />
+
 
     <TextView
         android:id="@+id/sell_nama_title"
@@ -84,16 +85,19 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_save_cp" />
+        app:layout_constraintTop_toBottomOf="@+id/sell_save" />
 
     <EditText
         android:id="@+id/sell_nama"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/shape_rectangle_white"
+        android:maxLines="1"
         android:padding="10dp"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,10 +125,8 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/shape_rectangle_white"
-        android:paddingLeft="10dp"
-        android:paddingTop="5dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="5dp"
+        android:padding="10dp"
+        android:maxLines="1"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -151,38 +153,46 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/shape_rectangle_white"
-        android:padding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:maxLines="1"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sell_deskripsi_title" />
 
     <TextView
-        android:id="@+id/sell_kategori_title"
+        android:id="@+id/sell_telefon_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/kategori_barang"
+        android:text="@string/nomor_handphone"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sell_deskripsi" />
 
-    <Spinner
-        android:id="@+id/sell_kategori"
+    <EditText
+        android:id="@+id/sell_telefon"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:spinnerMode="dropdown"
-        android:background="@drawable/shape_spinner"
-
+        android:background="@drawable/shape_rectangle_white"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:maxLines="1"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sell_kategori_title" />
+        app:layout_constraintTop_toBottomOf="@+id/sell_telefon_title" />
 
     <Button
         android:id="@+id/sell_jual"
@@ -198,4 +208,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

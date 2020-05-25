@@ -68,4 +68,6 @@
     <string name="jual">JUAL</string>
     <string name="nomor_handphone">Nomor Handphone</string>
     <string name="kategori_barang">Kategori Barang</string>
+    <string name="simpan_gambar">SIMPAN GAMBAR</string>
+    <string name="posting_berhasil">POSTING BERHASIL</string>
 </resources>

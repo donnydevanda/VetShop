@@ -1,4 +1,4 @@
-package com.devanda.vetshop.Profile
+package com.devanda.vetshop.Shop.Kategori
 
 import android.app.Activity
 import android.app.ProgressDialog
@@ -10,8 +10,9 @@ import android.provider.MediaStore
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.devanda.vetshop.Home.Doctor
 import com.devanda.vetshop.R
+import com.devanda.vetshop.Shop.Item.Mainan
+import com.devanda.vetshop.Shop.Posted
 import com.devanda.vetshop.Utils.Preferences
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.google.firebase.database.*
@@ -21,10 +22,10 @@ import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionDeniedResponse
 import com.karumi.dexter.listener.PermissionGrantedResponse
 import com.karumi.dexter.listener.single.PermissionListener
-import kotlinx.android.synthetic.main.activity_mitra.*
+import kotlinx.android.synthetic.main.activity_sell.*
 import java.util.*
 
-class Mitra : AppCompatActivity(), PermissionListener {
+class KategoriMainan : AppCompatActivity(), PermissionListener {
 
     val REQUEST_IMAGE_CAPTURE = 1
     var statusAdd:Boolean = false
@@ -40,7 +41,7 @@ class Mitra : AppCompatActivity(), PermissionListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mitra)
+        setContentView(R.layout.activity_sell)
 
         preferences = Preferences(this)
         storage = FirebaseStorage.getInstance()
@@ -48,13 +49,13 @@ class Mitra : AppCompatActivity(), PermissionListener {
 
         mFirebaseInstance = FirebaseDatabase.getInstance()
         mDatabase = FirebaseDatabase.getInstance().reference
-        mFirebaseDatabase = mFirebaseInstance.getReference("Doctor")
+        mFirebaseDatabase = mFirebaseInstance.getReference("Mainan")
 
-        iv_add_mitra.setOnClickListener {
+        sell_add.setOnClickListener {
             if (statusAdd) {
                 statusAdd = false
-                iv_add_mitra.setImageResource(R.drawable.ic_mitra_add)
-                iv_profile_mitra.setImageResource(R.drawable.ic_mitra_pic)
+                sell_add.setImageResource(R.drawable.ic_mitra_add)
+                sell_pic.setImageResource(R.drawable.ic_mitra_pic)
             } else {
                 ImagePicker.with(this)
                     .cropSquare()
@@ -64,26 +65,26 @@ class Mitra : AppCompatActivity(), PermissionListener {
             }
         }
 
-        btn_save_mitra.setOnClickListener {
+        sell_save.setOnClickListener {
             if (statusAdd){
                 if (filePath != null) {
                     val progressDialog = ProgressDialog(this)
                     progressDialog.setTitle("Uploading...")
                     progressDialog.show()
 
-                    val ref = storageReference.child("doctors/" + UUID.randomUUID().toString())
+                    val ref = storageReference.child("products/" + UUID.randomUUID().toString())
                     ref.putFile(filePath)
                         .addOnSuccessListener {
                             progressDialog.dismiss()
-                            Toast.makeText(this@Mitra, "Uploaded", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@KategoriMainan, "Uploaded", Toast.LENGTH_SHORT).show()
 
                             ref.downloadUrl.addOnSuccessListener {
-                                preferences.setValues("link", it.toString())
+                                preferences.setValues("linkproducts", it.toString())
                             }
                         }
                         .addOnFailureListener { e ->
                             progressDialog.dismiss()
-                            Toast.makeText(this@Mitra, "Failed " + e.message, Toast.LENGTH_SHORT)
+                            Toast.makeText(this@KategoriMainan, "Failed " + e.message, Toast.LENGTH_SHORT)
                                 .show()
                         }
                         .addOnProgressListener { taskSnapshot ->
@@ -99,23 +100,21 @@ class Mitra : AppCompatActivity(), PermissionListener {
             }
         }
 
-        mitra_back_btn.setOnClickListener {
+        sell_back_btn.setOnClickListener {
             finish()
         }
 
-        mitra_back_text.setOnClickListener {
+        sell_back_text.setOnClickListener {
             finish()
         }
 
-        mitra_daftar.setOnClickListener {
+        sell_jual.setOnClickListener {
             if (statusAdd){
-                var sNama = mitra_nama.text.toString()
-                var sAlamat = mitra_alamat.text.toString()
-                var sJam = mitra_jam.text.toString()
-                var sInfo = mitra_info.text.toString()
-                var sTelefon = mitra_telefon.text.toString()
-                var sImage = preferences.getValues("link")
-                saveProject(sNama, sAlamat, sJam, sInfo, sTelefon, sImage)
+                var sNama = sell_nama.text.toString()
+                var sHarga = sell_harga.text.toString()
+                var sDeskripsi = sell_deskripsi.text.toString()
+                var sImage = preferences.getValues("linkproducts")
+                saveProject(sNama, sHarga, sDeskripsi, sImage)
             } else{
                 Toast.makeText(this, "Mohon Simpan Gambar", Toast.LENGTH_SHORT).show()
             }
@@ -123,48 +122,43 @@ class Mitra : AppCompatActivity(), PermissionListener {
         }
     }
 
-    private fun saveProject(sNama: String?, sAlamat: String?, sJam: String?, sInfo: String?,
-                            sTelefon: String?, sImage: String?) {
-        val doctor = Doctor()
-        doctor.nama = sNama
-        doctor.alamat = sAlamat
-        doctor.praktek = sJam
-        doctor.info = sInfo
-        doctor.telefon = sTelefon
-        doctor.images = sImage
+    private fun saveProject(sNama: String?, sHarga: String?, sDeskripsi: String?, sImage: String?) {
+        val mainan = Mainan()
+        mainan.nama = sNama
+        mainan.harga = sHarga
+        mainan.deskripsi = sDeskripsi
+        mainan.images = sImage
 
         if (sNama != null) {
-            checkingUsername(sNama, doctor)
+            checkingUsername(sNama, mainan)
         }
     }
 
-    private fun checkingUsername(iTitle: String, data: Doctor) {
+    private fun checkingUsername(iTitle: String, data: Mainan) {
         mFirebaseDatabase.child(iTitle).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
 
-                val user = dataSnapshot.getValue(Doctor::class.java)
-                if (user == null) {
+                val kat = dataSnapshot.getValue(Mainan::class.java)
+                if (kat == null) {
                     mFirebaseDatabase.child(iTitle).setValue(data)
                     preferences.setValues("nama", data.nama.toString())
-                    preferences.setValues("alamat", data.alamat.toString())
-                    preferences.setValues("jam", data.praktek.toString())
-                    preferences.setValues("info", data.info.toString())
-                    preferences.setValues("telefon", data.telefon.toString())
+                    preferences.setValues("harga", data.harga.toString())
+                    preferences.setValues("deskripsi", data.deskripsi.toString())
                     preferences.setValues("images", data.images.toString())
                     preferences.setValues("status", "1")
 
-                    val intent = Intent(this@Mitra,
-                        Success::class.java)
+                    val intent = Intent(this@KategoriMainan,
+                        Posted::class.java)
                     startActivity(intent)
 
                 } else {
-                    Toast.makeText(this@Mitra, "Nama Sudah Digunakan", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@KategoriMainan, "Nama Sudah Digunakan", Toast.LENGTH_LONG).show()
 
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@Mitra, ""+error.message, Toast.LENGTH_LONG).show()
+                Toast.makeText(this@KategoriMainan, ""+error.message, Toast.LENGTH_LONG).show()
             }
         })
     }
@@ -199,9 +193,9 @@ class Mitra : AppCompatActivity(), PermissionListener {
             Glide.with(this)
                 .load(filePath)
                 .apply(RequestOptions.circleCropTransform())
-                .into(iv_profile_mitra)
+                .into(sell_pic)
 
-            iv_add_mitra.setImageResource(R.drawable.ic_mitra_delete)
+            sell_add.setImageResource(R.drawable.ic_mitra_delete)
 
         } else if (resultCode == ImagePicker.RESULT_ERROR) {
             Toast.makeText(this, ImagePicker.getError(data), Toast.LENGTH_SHORT).show()
@@ -209,4 +203,5 @@ class Mitra : AppCompatActivity(), PermissionListener {
             Toast.makeText(this, "Task Cancelled", Toast.LENGTH_SHORT).show()
         }
     }
+
 }
